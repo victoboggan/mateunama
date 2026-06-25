@@ -4,230 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mateunama - Apoyo Universitario</title>
-    <style>
-        /* --- ESTILOS GENERALES --- */
-        :root {
-            --color-principal: #0f172a;
-            /* Azul oscuro */
-            --color-secundario: #3b82f6;
-            /* Azul brillante */
-            --color-fondo: #f8fafc;
-            --color-texto: #334155;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
-            line-height: 1.6;
-        }
-
-        /* --- NAVEGACIÓN --- */
-        header {
-            background-color: var(--color-principal);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--color-secundario);
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .menu a:hover {
-            color: var(--color-secundario);
-        }
-
-        /* --- SECCIÓN PRINCIPAL (HERO) --- */
-        .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 6rem 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #cbd5e1;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--color-secundario);
-            color: white;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #2563eb;
-        }
-
-        .btn-youtube {
-            background-color: #ef4444;
-            /* Rojo de YouTube */
-            margin-left: 10px;
-        }
-
-        .btn-youtube:hover {
-            background-color: #dc2626;
-        }
-
-        /* --- SECCIÓN DE MATERIAS --- */
-        .seccion {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .titulo-seccion {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--color-principal);
-        }
-
-        .grid-materias {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .tarjeta-materia {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: var(--color-texto);
-            display: block;
-        }
-
-        .tarjeta-materia:hover {
-            transform: translateY(-5px);
-            border-bottom: 4px solid var(--color-secundario);
-        }
-
-        .tarjeta-materia h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--color-principal);
-        }
-
-        /* --- SECCIÓN SOBRE MÍ --- */
-        .sobre-mi {
-            background-color: white;
-            border-radius: 10px;
-            padding: 3rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .perfil-img {
-            width: 200px;
-            height: 200px;
-            background-color: #e2e8f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #94a3b8;
-            flex-shrink: 0;
-        }
-
-        .perfil-info h3 {
-            font-size: 2rem;
-            color: var(--color-principal);
-            margin-bottom: 1rem;
-        }
-
-        .contacto-lista {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .contacto-lista li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--color-principal);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .sobre-mi {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .menu {
-                display: none;
-                /* En un proyecto real aquí iría un menú hamburguesa */
-            }
-        }
-    </style>
+    <title>mateunama - Apoyo Universitario</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
 
     <header>
         <nav>
-            <a href="#" class="logo">Mate<span>unama</span></a>
+            <a href="#" class="logo">mate<span>unama</span></a>
             <div class="menu">
-                <a href="#inicio">Inicio</a>
                 <a href="#materias">Materias</a>
                 <a href="#sobre-mi">Sobre mí</a>
             </div>
@@ -236,10 +22,10 @@
 
     <section id="inicio" class="hero">
         <h1>Domina las Matemáticas Universitarias</h1>
-        <p>Encuentra clases, ejercicios resueltos y guías de estudio para aprobar tus materias de ciencias exactas sin
+        <p>Encuentra clases, ejercicios resueltos y guías de estudio para aprobar tus materias de matemáticas sin
             complicaciones.</p>
         <a href="#materias" class="btn">Ver Material</a>
-        <a href="#" class="btn btn-youtube" target="_blank">Canal de YouTube</a>
+        <a href="https://www.youtube.com/@mateUNAma" class="btn btn-youtube" target="_blank">Canal de YouTube</a>
     </section>
 
     <section id="materias" class="seccion">
@@ -262,7 +48,27 @@
             </a>
 
             <a href="geometria.html" class="tarjeta-materia">
-                <h3>Geometría y Álgebra Lineal</h3>
+                <h3>Geometría Vectorial y Analítica</h3>
+                <p>Vectores, matrices, sistemas de ecuaciones y geometría en el espacio.</p>
+            </a>
+
+            <a href="algebra.html" class="tarjeta-materia">
+                <h3>Álgebra Lineal</h3>
+                <p>Vectores, matrices, sistemas de ecuaciones y geometría en el espacio.</p>
+            </a>
+
+            <a href="calculo-varias.html" class="tarjeta-materia">
+                <h3>Cálculo en Varias Variables</h3>
+                <p>Vectores, matrices, sistemas de ecuaciones y geometría en el espacio.</p>
+            </a>
+
+            <a href="ED.html" class="tarjeta-materia">
+                <h3>Ecuaciones Diferenciales</h3>
+                <p>Vectores, matrices, sistemas de ecuaciones y geometría en el espacio.</p>
+            </a>
+
+            <a href="metodos.html" class="tarjeta-materia">
+                <h3>Métodos Numéricos</h3>
                 <p>Vectores, matrices, sistemas de ecuaciones y geometría en el espacio.</p>
             </a>
         </div>
@@ -275,22 +81,24 @@
             <div class="perfil-img">👨‍🏫</div>
 
             <div class="perfil-info">
-                <h3>¡Hola! Soy [Tu Nombre]</h3>
-                <p>Soy el creador de <strong>Mateunama</strong>. Mi objetivo es hacer que las matemáticas universitarias
-                    sean accesibles y comprensibles para todos. A través de mi canal de YouTube y esta plataforma, busco
+                <h3>¡Hola! Soy Victor Manuel Prieto</h3>
+                <p>Soy el creador de <strong>mateunama</strong>. Mi objetivo es hacer que las matemáticas universitarias
+                    sean accesibles y comprensibles para tod@s. A través de mi canal de YouTube y esta plataforma, busco
                     brindarte las herramientas necesarias para que superes tus retos académicos.</p>
 
                 <ul class="contacto-lista">
-                    <li>📧 <strong>Email:</strong> contacto@mateunama.com</li>
+                    <li>📧 <strong>Email:</strong> mateunama@gmail.com</li>
                     <li>📱 <strong>Redes Sociales:</strong> @mateunama</li>
-                    <li>🎓 <strong>Universidad/Estudios:</strong> [Tu carrera o profesión]</li>
+                    <li>🎓 <strong>Universidad/Estudios:</strong> Bachiller con Profundización en Pedagogía, Técnico
+                        en Programación de Software, Estudiante Ingeniería Ambiental
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Mateunama. Todos los derechos reservados.</p>
+        <p>&copy; 2026 mateunama. Todos los derechos reservados.</p>
     </footer>
 
 </body>
