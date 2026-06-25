@@ -1,0 +1,220 @@
+/* --- VARIABLES --- */
+:root {
+    --color-principal: #0f172a;
+    --color-secundario: #3b82f6;
+    --color-fondo: #f8fafc;
+    --color-texto: #334155;
+    --rojo-youtube: #ef4444;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* Un poco más estrecho para facilitar la lectura */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+/* --- NAVEGACIÓN --- */
+header {
+    background-color: var(--color-principal);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-secundario);
+}
+
+.btn-volver {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- SECCIÓN DESCRIPCIÓN (HERO DEL CURSO) --- */
+.curso-hero {
+    background-color: white;
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.curso-hero h1 {
+    font-size: 2.8rem;
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.descripcion-curso {
+    font-size: 1.2rem;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- SECCIÓN DRIVE --- */
+.seccion-drive {
+    padding: 4rem 0;
+}
+
+.texto-instruccion {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #64748b;
+}
+
+/* Contenedor clave para que el Drive sea responsive */
+.drive-contenedor {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Altura fija para visualización cómoda en PC */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Evita que el iframe se salga de los bordes redondeados */
+    border: 1px solid #e2e8f0;
+}
+
+.drive-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- SECCIÓN YOUTUBE --- */
+.seccion-youtube {
+    background-color: white;
+    padding: 5rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contenido-youtube {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 3rem;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.texto-youtube h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.texto-youtube p {
+    color: #cbd5e1;
+    max-width: 500px;
+}
+
+.btn-youtube-grande {
+    display: inline-block;
+    background-color: var(--rojo-youtube);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+}
+
+.btn-youtube-grande:hover {
+    background-color: #dc2626;
+    transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .curso-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .descripcion-curso {
+        font-size: 1.1rem;
+    }
+
+    .contenido-youtube {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .texto-youtube p {
+        margin: 0 auto;
+    }
+
+    .btn-youtube-grande {
+        width: 100%;
+    }
+
+    /* Reducimos la altura del visor de Drive en celulares para que quepa en pantalla */
+    .drive-contenedor {
+        height: 450px;
+    }
+}
